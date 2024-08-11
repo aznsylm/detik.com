@@ -1,0 +1,828 @@
+/* ##################################### HTML ##################################### */
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+
+/* ##################################### Navbar ##################################### */
+.navbar {
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.25);
+    padding: 1.5rem 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: ease 0.5s;
+}
+
+.navbar .mobile-nav {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.navbar .mobile-nav .navbar-brand {
+    width: 171px;
+}
+
+.navbar .mobile-nav .navbar-brand img {
+    width: 100%;
+    padding-bottom: 4px;
+}
+
+.navbar .navbar-content {
+    justify-content: space-between;
+}
+
+.navbar .navbar-content .search-form {
+    margin: 0 1rem;
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.navbar .navbar-content .search-form input {
+    width: 100%;
+    padding: 0.75rem 1.25rem 0.75rem 3rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    border: none;
+    border-radius: 50rem;
+}
+
+.navbar .navbar-content .navbar-nav {
+    gap: 16px;
+    font-size: 16px;
+}
+
+.navbar .navbar-content .navbar-nav .nav-item {
+    margin: auto;
+}
+
+.navbar .navbar-content .navbar-nav .nav-item .nav-link {
+    transition: color 0.5s ease;
+    font-weight: 400;
+    display: inline-block;
+    position: relative;
+}
+
+.navbar .navbar-content .navbar-nav .nav-item .nav-link:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #204499;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.btn {
+    padding: 8px 32px;
+    border-radius: 15px;
+    font-weight: 700;
+    transition: all ease 0.3s;
+}
+
+.navbar .btn {
+    border-radius: 15px;
+    padding: 8px 16px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.navbar .login-button {
+    background-color: #204499;
+    box-sizing: border-box;
+}
+
+.navbar .register-button {
+    border: solid 2px #204499;
+    color: #204499;
+    border-radius: 15px;
+}
+
+/* ##################################### Hero ##################################### */
+#hero {
+    background-color: #fff;
+    padding-top: 64px;
+    padding-bottom: 100px;
+    border-radius: 0 0 128px 128px;
+}
+
+#hero .hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#hero .swiper {
+    border-radius: 30px;
+    width: 100%;
+}
+
+#hero .swiper .swiper-wrapper .swiper-slide {
+    background-color: rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    padding-top: 33.33%;
+}
+
+#hero .swiper .swiper-wrapper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#hero .swiper .swiper-button-prev, #hero .swiper .swiper-rtl .swiper-button-next {
+    left: var(--swiper-navigation-sides-offset, 0px);
+}
+
+#hero .swiper .swiper-button-prev:after, #hero .swiper .swiper-rtl .swiper-button-next:after {
+    transform: rotate(180deg);
+}
+
+#hero .swiper .swiper-button-next:after, #hero .swiper .swiper-rtl .swiper-button-prev:after, #hero .swiper .swiper-button-prev:after, #hero .swiper .swiper-rtl .swiper-button-next:after {
+    content: url(../img/swiper-navigation.svg);
+}
+
+#hero .swiper .swiper-button-next, #hero .swiper .swiper-rtl .swiper-button-prev {
+    right: var(--swiper-navigation-sides-offset, 0px);
+}
+
+#hero .swiper .swiper-button-next:after, #hero .swiper .swiper-rtl .swiper-button-prev:after, #hero .swiper .swiper-button-prev:after, #hero .swiper .swiper-rtl .swiper-button-next:after {
+    content: url(../img/swiper-navigation.svg);
+}
+
+#hero .desc-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#hero .desc-container .hero-headline {
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #204499;
+}
+
+.emoji {
+    width: 1em;
+}
+
+#hero .desc-container h4 {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+#hero .hero-button {
+    padding: 16px 48px;
+    border-radius: 16px;
+    background-color: #204499;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+/* ##################################### Class ##################################### */
+#latest-class {
+    padding: 100px 0;
+}
+
+#latest-class .latest-class-container {
+    display: flex;
+}
+
+#latest-class .latest-class-container .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
+#latest-class .latest-class-container .desc .text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#latest-class .latest-class-container .desc .text h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+    color: #204499;
+}
+
+#latest-class .latest-class-container .desc .text p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+#latest-class .latest-class-container .desc button {
+    width: fit-content;
+    padding: 12px 32px;
+    background-color: #204499;
+    color: #fff;
+    border-radius: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+#latest-class .latest-class-container .latest-class-swiper {
+    max-height: 500px;
+}
+
+#latest-class .latest-class-container .latest-class-swiper .swiper-wrapper .swiper-slide {
+    padding: 50px;
+    display: flex;
+    background-color: #fff;
+    border-radius: 16px;
+}
+
+#latest-class .latest-class-container .latest-class-swiper .swiper-wrapper .swiper-slide .image-sizing {
+    width: 50%;
+}
+
+#latest-class .latest-class-container .latest-class-swiper .swiper-wrapper .swiper-slide .image-ratio {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 56.25%;
+}
+
+#latest-class .latest-class-container .latest-class-swiper .swiper-wrapper .swiper-slide .image-ratio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#latest-class .latest-class-container .latest-class-swiper .swiper-wrapper .swiper-slide .slide-desc {
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#latest-class .latest-class-container .latest-class-swiper .swiper-wrapper .swiper-slide .slide-desc .course-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+    color: black;
+    text-decoration: none;
+}
+
+#latest-class .latest-class-container .latest-class-swiper .swiper-wrapper .swiper-slide .slide-desc .course-desc {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    min-height: 13.5em;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+
+/* ##################################### Course Category ##################################### */
+#course-category {
+    background-color: #fff;
+    border-radius: 128px 128px 0 0;
+    padding: 100px 0;
+}
+
+#course-category .course-category-container .course-category-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #204499;
+}
+
+#course-category .course-category-container .course-category-header h4 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+#course-category .course-category-container .course-category-swiper {
+    margin-top: 48px;
+}
+
+#course-category .course-category-container .course-category-swiper .business {
+    background-image: url('https://learning.detik.com/frontpage/assets/images/course-category/business.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#course-category .course-category-container .course-category-swiper .swiper-slide {
+    width: 280px;
+    height: 240px;
+    padding: 24px;
+}
+
+#course-category .course-category-container .course-category-swiper .swiper-slide h4 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+#course-category .course-category-container .course-category-swiper .swiper-slide span {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* ##################################### Testimonial ##################################### */
+#user-testimonial {
+    background-image: url('https://learning.detik.com/frontpage/assets/images/user-testimonial/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 24px 0;
+}
+
+#user-testimonial .user-testimonial-container {
+    color: white;
+    display: flex;
+}
+
+#user-testimonial .user-testimonial-container .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+}
+
+#user-testimonial .user-testimonial-container .desc .desc-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+#user-testimonial .user-testimonial-container .desc .desc-header h4 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+#user-testimonial .user-testimonial-container .desc .read-all-testimonial {
+    width: fit-content;
+    padding: 8px 40px;
+    color: #204499;
+    background-color: white;
+    border-radius: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+#user-testimonial .user-testimonial-container .user-testimonial-swiper .swiper-slide {
+    padding: 48px;
+    background-color: white;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 420px;
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#user-testimonial .user-testimonial-container .user-testimonial-swiper .swiper-slide .testimonial-content .testimonial {
+    padding-top: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#user-testimonial .user-testimonial-container .user-testimonial-swiper .swiper-slide .testimonial-identity {
+    padding-top: 24px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    border-top: solid 2px rgba(0, 0, 0, 0.5);
+    color: rgb(32, 68, 153);
+}
+
+#user-testimonial .user-testimonial-container .user-testimonial-swiper .swiper-button-next, #user-testimonial .user-testimonial-container .user-testimonial-swiper .swiper-rtl .swiper-button-prev {
+    right: var(--swiper-navigation-sides-offset, 0px);
+}
+
+#user-testimonial .user-testimonial-container .user-testimonial-swiper .swiper-button-next:after, #user-testimonial .user-testimonial-container .user-testimonial-swiper .swiper-rtl .swiper-button-prev:after, #user-testimonial .user-testimonial-container .user-testimonial-swiper .swiper-button-prev:after, #user-testimonial .user-testimonial-container .user-testimonial-swiper .swiper-rtl .swiper-button-next:after {
+    content: url('https://learning.detik.com/frontpage/assets/images/latest-class/nav-swiper.svg');
+}
+
+#user-testimonial .user-testimonial-container .user-testimonial-swiper .swiper-button-prev, #user-testimonial .user-testimonial-container .user-testimonial-swiper .swiper-rtl .swiper-button-next {
+    left: var(--swiper-navigation-sides-offset, 0px);
+}
+
+#user-testimonial .user-testimonial-container .user-testimonial-swiper .swiper-button-prev:after, #user-testimonial .user-testimonial-container .user-testimonial-swiper .swiper-rtl .swiper-button-next:after {
+    transform: rotate(180deg);
+}
+
+#user-testimonial .user-testimonial-container .user-testimonial-swiper .swiper-button-next:after, #user-testimonial .user-testimonial-container .user-testimonial-swiper .swiper-rtl .swiper-button-prev:after, #user-testimonial .user-testimonial-container .user-testimonial-swiper .swiper-button-prev:after, #user-testimonial .user-testimonial-container .user-testimonial-swiper .swiper-rtl .swiper-button-next:after {
+    content: url('https://learning.detik.com/frontpage/assets/images/latest-class/nav-swiper.svg');
+}
+
+/* ##################################### Certificate ##################################### */
+#certificate-entry {
+    background-color: white;
+    border-radius: 0 0 64px 64px;
+    padding: 64px 0;
+}
+
+#certificate-entry .wording h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: rgb(32, 68, 153);
+    margin: 0;
+}
+
+#certificate-entry .wording p {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 0;
+}
+
+#certificate-entry .cta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#certificate-entry .cta .btn-outline {
+    border: 2px solid rgb(32, 68, 153);
+    color: #204499;
+}
+
+#certificate-entry .cta .btn-solid {
+    background-color: #204499;
+    color: white;
+}
+
+#certificate-entry .cta .btn {
+    padding: 16px 32px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    transition: all ease 0.3s;
+}
+
+#certificate-entry .cta .modal .modal-header {
+    padding: 32px;
+    border-bottom: none;
+}
+
+#certificate-entry .cta .modal .modal-body {
+    padding: 0 32px 32px 32px;
+}
+
+#certificate-entry .cta .modal .modal-body h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #204499;
+}
+
+#certificate-entry .cta .modal .modal-body ol li {
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#certificate-entry .cta .modal .modal-body ol li img {
+    margin-top: 8px;
+    max-width: 100%;
+}
+
+/* ##################################### Content ##################################### */
+#featured-content {
+    padding: 100px 0;
+}
+
+#featured-content .featured-content-container {
+    background-image: url('https://learning.detik.com/frontpage/assets/images/featured-content/bg.svg'), url('https://learning.detik.com/frontpage/assets/images/featured-content/bg2.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    padding: 64px 0;
+    gap: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 30px;
+}
+
+#featured-content .featured-content-container h1 {
+    color: #204499;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+#featured-content .featured-content-container .content {
+    display: flex;
+    gap: 128px;
+}
+
+#featured-content .featured-content-container .content .content-type {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+#featured-content .featured-content-container .content .content-type h2 {
+    margin: 0;
+    color: #204499;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 59px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+#featured-content .featured-content-container .content .content-type span {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+/* ##################################### Get To Know ##################################### */
+#get-to-know {
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+#get-to-know .img-bg {
+    position: absolute;
+    width: 500px;
+    height: auto;
+}
+
+#get-to-know .img-bg.img1 {
+    top: 0;
+    left: -64px;
+}
+
+#get-to-know .img-bg.img2 {
+    bottom: -325px;
+    right: -100px;
+}
+
+#get-to-know .container {
+    padding: 64px 1.25rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#get-to-know .container .video-container {
+    border-radius: 30px;
+    overflow: hidden;
+    height: fit-content;
+}
+
+#get-to-know .container .video-container .container-ratio {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+#get-to-know .container .video-container .container-ratio iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#get-to-know .container .desc h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(32, 68, 153);
+}
+
+#get-to-know .container .desc p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* ##################################### FAQ ##################################### */
+#faq {
+    padding: 100px 0;
+}
+
+#faq .faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+#faq .faq-container h1 {
+    color: rgb(32, 68, 153);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+#faq .faq-container .faq-content {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+#faq .faq-container .faq-content .accordion {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#faq .faq-container .faq-content .accordion .accordion-item {
+    border-radius: 30px;
+}
+
+#faq .faq-container .faq-content .accordion .accordion-item .accordion-button:focus, #faq .faq-container .faq-content .accordion .accordion-item .accordion-button:focus-visible, #faq .faq-container .faq-content .accordion .accordion-item .accordion-button:not(.collapse) {
+    background-color: white;
+    box-shadow: none;
+}
+
+#faq .faq-container .faq-content .accordion .accordion-item .accordion-button {
+    border-radius: 30px;
+    font-weight: 500;
+    text-align: left;
+}
+
+/* ##################################### Footer ##################################### */
+#footer {
+    background-color: white;
+}
+
+#footer .footer-container {
+    padding: 72px 0;
+}
+
+#footer .footer-container .line1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .footer-container .line1 .footer-logo {
+    width: 240px;
+    height: auto;
+}
+
+#footer .footer-container .line1 .footer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#footer .footer-container .line1 .section-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#footer .footer-container .line1 .section-nav a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-decoration: none;
+    color: #204499;
+}
+
+#footer .footer-container .line2 {
+    padding-top: 24px;
+}
+
+#footer .footer-container .line2 .sosmed-logo {
+    display: flex;
+    gap: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+#footer .footer-container .line2 .sosmed-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+#footer .copyright {
+    background-color: #e9e9e9;
+    text-align: center;
+    padding: 8px 0;
+}
+
+#footer .copyright span {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #204499;
+}
